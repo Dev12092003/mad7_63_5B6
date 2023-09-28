@@ -17,12 +17,12 @@ class YoutubeMainActivity2 : AppCompatActivity() {
             Intent(this,MainActivity::class.java).also { startActivity(it) }
         }
     }
-    private val youtubeID= "v=r-9uGG_-fp0&t=37s"
+    private val youtubeID= "https://www.youtube.com/watch?v=keg_2PlBnbY"
     private fun initYoutubePlayer(){
         val websettings:WebSettings=binding.webviwe.settings
         websettings.javaScriptEnabled=true
         websettings.loadWithOverviewMode=true
         websettings.useWideViewPort=true
-        binding.webviwe.loadUrl("https://www.youtube.com/embed/$youtubeID")
+        binding.webviwe.loadUrl("$youtubeID")
     }
 }
